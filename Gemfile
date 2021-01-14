@@ -20,6 +20,9 @@ gem 'rexml'
 gem 'bootstrap-sass'
 gem 'hirb'
 gem 'bcrypt'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
