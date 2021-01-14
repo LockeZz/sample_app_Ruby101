@@ -12,3 +12,8 @@ hfpang:
     name: hfpang
     email: hfpang@example.com
     password_digest: <%= User.digest('asdasd') %>
+
+michael:
+  name: Michael Example
+  email: michael@example.com
+  password_digest: <%= User.digest('asdasd') %>
