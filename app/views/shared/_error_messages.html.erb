@@ -1,6 +1,6 @@
 <% if @user.errors.any? %>
-    <div id="error_explanation">
-        <div class="alert alert-danger">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <div class="alert-heading">
             The form contains <%= pluralize(@user.errors.count, "error") %>
         </div>
         <ul>
@@ -8,5 +8,7 @@
                 <li><%= msg %></li>
             <% end %>
         </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        </button>   
     </div>
 <% end %>
