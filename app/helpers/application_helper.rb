@@ -14,7 +14,8 @@ module ApplicationHelper
             "success" => "alert-success",
             "error" => "alert-danger",
             "notice" => "alert-info",
-            "alert" => "alert-danger"
+            "alert" => "alert-danger",
+            "info" => "alert-info"
         }
         bootstrap_alert_class[level]
     end
