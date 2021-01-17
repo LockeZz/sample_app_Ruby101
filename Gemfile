@@ -23,6 +23,13 @@ gem 'bcrypt'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+
+## basic image uploaded
+gem 'carrierwave'
+## image resizing
+gem 'mini_magick'
+##cloud storage
+gem 'fog'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
