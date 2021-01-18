@@ -85,4 +85,22 @@ class UserTest < ActiveSupport::TestCase
     hfpang.unfollow(michael)
     assert_not hfpang.following?(michael)
   end
+
+  test "feed should have the right posts" do
+    hfpang = users(:hfpang)
+    michael = users(:michael)
+    archer = users(:archer)
+    # Posts from followed user
+    archer.microposts.each do |post_following|
+      assert hfpang.feed.include?(post_following)
+    end
+    #Posts from self
+    hfpang.microposts.each do |post_self|
+      assert hfpang.feed.include?(post_self)
+    end
+    #Post form unfollowed user
+    michael.microposts.each do |post_unfollowed|
+      assert_not hfpang.feed.include?(post_unfollowed)
+    end
+  end
 end
