@@ -74,4 +74,15 @@ class UserTest < ActiveSupport::TestCase
       @user.destroy
     end
   end
+
+  test "should follow and unfollow a user" do
+    hfpang = users(:hfpang)
+    michael = users(:michael)
+    assert_not hfpang.following?(michael)
+    hfpang.follow(michael)
+    assert hfpang.following?(michael)
+    assert michael.followers.include?(hfpang)
+    hfpang.unfollow(michael)
+    assert_not hfpang.following?(michael)
+  end
 end
